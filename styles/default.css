@@ -1,0 +1,383 @@
+:root {
+    --mainColor: black;
+    --secondaryColor: #575752;
+    --borderColor: #ebe9e4;
+    --mainText: white;
+    --secondaryText: #f7ece1;
+    --bodyWrappersGradientBackground1: linear-gradient(to top right, var(--secondaryColor) 0%, var(--mainColor) 100%);
+    --bodyWrappersGradientBackground2: linear-gradient(to bottom left, var(--secondaryColor) 0%, var(--mainColor) 100%);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--mainColor);
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--mainText);
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: 500;
+}
+
+p, li, span, label, input, textarea {
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+/* ------------- for button effects :start -------------------------*/
+
+.button {
+    border: 1px solid green;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transform: skewX(-10deg);
+    height: 50px;
+    width: 200px;
+    border-radius: 20px 5px 20px 0px;
+    margin-left: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font: 15px sans-serif;
+    font-weight: 300;
+    text-shadow: 0 0 20px #fff;
+    text-transform: uppercase;
+    -webkit-animation: breath2 2s 0.5s infinite alternate;
+    animation: breath2 2s 0.5s infinite alternate;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.button:before {
+    content: "";
+    display: block;
+    width: calc(100% - 22px);
+    height: calc(50px - 8px);
+    -webkit-animation: breath 2s infinite alternate;
+    animation: breath 2s infinite alternate;
+    left: 10px;
+    top: 3px;
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 15px 3px 15px 3px;
+}
+
+.button.fire {
+    border-color: var(--borderColor);
+    background-image: linear-gradient(to bottom, var(--mainColor), var(--secondaryColor));
+    box-shadow: 0 0 70px rgba(255, 138, 48, 0.6), 0 5px 20px rgba(255, 138, 48, 0.6), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+    color: #ffeca8;
+}
+
+.button.fire:before {
+    box-shadow: inset 0 0 30px 0 #ffeca8;
+}
+
+.button:hover.fire {
+    box-shadow: 0 0 70px rgba(255, 138, 48, 0.8), 0 5px 20px rgba(255, 138, 48, 0.8), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+}
+
+.button:hover.fire:before {
+    box-shadow: inset 0 0 50px 0 #ffeca8;
+}
+
+.button+.button {
+    margin-top: 15px;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+@-webkit-keyframes breath {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0.95);
+    }
+}
+
+@keyframes breath {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0.95);
+    }
+}
+
+@-webkit-keyframes breath2 {
+    0% {
+        transform: skewX(-10deg) scaleX(1);
+    }
+    100% {
+        transform: skewX(-10deg) scaleX(0.95);
+    }
+}
+
+@keyframes breath2 {
+    0% {
+        transform: skewX(-10deg) scaleX(1);
+    }
+    100% {
+        transform: skewX(-10deg) scaleX(0.95);
+    }
+}
+
+.ref {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    padding: 5px 8px;
+    position: absolute;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-weight: 300;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.ref::first-letter {
+    font-size: 12px;
+}
+
+/* ------------- for button effects :end -------------------------*/
+
+/* ------------- top navigation :start -------------------------*/
+
+.s-nav {
+    background-color: var(--mainColor);
+    color: var(--mainText);
+    overflow: auto;
+}
+
+/* ------------- top navigation :end -------------------------*/
+
+/* ------------- Sections style :start -------------------------*/
+
+.s-greeting {
+    background-color: var(--mainColor);
+    /*border-bottom: 1px solid var(--borderColor);*/
+    color: var(--mainText);
+    overflow: auto;
+}
+
+.s1 {
+    /*background-color: var(--mainColor);*/
+    /*background: linear-gradient(to top right, var(--secondaryColor) 0%, var(--mainColor) 100%);*/
+    border-bottom: 1px solid var(--borderColor);
+    color: var(--mainText);
+    overflow: auto;
+}
+
+.s2 {
+    /*background-color: var(--secondaryColor);*/
+    background: linear-gradient(to bottom left, var(--secondaryColor) 0%, var(--mainColor) 100%);
+    border-bottom: 1px solid var(--borderColor);
+    color: var(--secondaryText);
+    overflow: auto;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ------------- Sections contents style :end -------------------------*/
+
+/* ------------- Greeting contents style :start -------------------------*/
+
+.greeting-wrapper {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.greeting-wrapper h1 {
+    margin: 0px;
+}
+
+/*
+.greeting-text {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+}
+*/
+
+.greeting-text .my-name {
+    padding: 0 0 15px 25px;
+    border-left: 4px solid var(--borderColor);
+}
+
+.my-pic img{
+    display: block;
+    margin: -30px auto 0 auto;
+    height:350px;
+    width:350px;
+    object-fit: cover;
+}
+
+/* ------------- Greeting contents style :end -------------------------*/
+
+/* ------------- Intro wrapper style :start -------------------------*/
+
+.intro-wrapper {
+    margin: 4px 0;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(235, 233, 228, 1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(235, 233, 228, 1);
+    box-shadow: 0px 0px 12px 0px rgba(235, 233, 228, 1);
+    display: grid;
+    grid-template-columns: 1fr;
+    background: linear-gradient(to top left, var(--secondaryColor) 0%, var(--mainColor) 100%);
+}
+
+.intro-wrapper .nav-wrapper {
+    border-bottom: 1px solid var(--borderColor);
+}
+
+/*------------------- The navbar ----------------------*/
+
+.nav-wrapper {
+    overflow: hidden;
+    align-items: center;
+    margin: 1px;
+}
+
+/* Navbar links */
+
+.nav-wrapper a {
+    float: left;
+    display: flex;
+    color: var(--secondaryText);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.nav-wrapper a:hover {
+    background-color: #ddd;
+    box-shadow: 0 0 70px rgba(255, 138, 48, 0.8), 0 5px 20px rgba(255, 138, 48, 0.8), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+    color: black;
+}
+
+.nav-wrapper .active {
+    box-shadow: 0 0 70px rgba(255, 138, 48, 0.6), 0 5px 20px rgba(255, 138, 48, 0.6), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+    color: #ffeca8;
+}
+
+.nav-wrapper-contents {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.nav-wrapper-contents div {
+    display: none;
+}
+
+.nav-wrapper-contents .active {
+    display: block;
+}
+
+/*----------------------about navbar end-----------------------*/
+/*----------------------about content start-----------------------*/
+
+#about-contents{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#about-contents img{
+    display: block;
+    margin: 0 auto;
+    max-height:300px;
+    width:auto;
+    object-fit: cover;
+}
+
+#about-contents .right-column{
+    padding:0 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+/*----------------------about content end-----------------------*/
+
+/* ------------- Intro wrapper style :start -------------------------*/
+
+@media screen and (max-width:1200px) {
+    .main-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:860px) {
+    h3{
+        font-size: 20px;
+        margin-bottom:0px;
+    }
+    .greeting-wrapper {
+        grid-template-columns: 1fr;
+        margin:0 8%;
+    }
+    #about-contents{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+   
+    #about-contents img{
+        max-height:200px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .greeting-wrapper {
+        grid-template-columns: 1fr;
+        margin:0 6%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #about-contents img{
+        max-height:150px;
+    }
+}
