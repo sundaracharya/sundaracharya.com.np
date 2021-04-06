@@ -4,6 +4,7 @@
     --borderColor: #ebe9e4;
     --mainText: white;
     --secondaryText: #f7ece1;
+    --highlightText: rgb(255, 215, 0);
     --bodyWrappersGradientBackground1: linear-gradient(to top right, var(--secondaryColor) 0%, var(--mainColor) 100%);
     --bodyWrappersGradientBackground2: linear-gradient(to bottom left, var(--secondaryColor) 0%, var(--mainColor) 100%);
 }
@@ -26,6 +27,12 @@ p, li, span, label, input, textarea {
     font-family: 'Roboto Mono', monospace;
 }
 
+input, textarea {
+    -webkit-box-shadow: inset 0px 0px 10px 5px rgba(235, 233, 228, 1);
+    -moz-box-shadow: inset 0px 0px 10px 5px rgba(235, 233, 228, 1);
+    box-shadow: inset 0px 0px 10px 5px rgba(235, 233, 228, 1);
+}
+
 a {
     text-decoration: none;
     color: #17a2b8;
@@ -37,26 +44,39 @@ ul {
 
 h1 {
     font-size: 56px;
+    color: var(--mainText);
 }
 
 h2 {
     font-size: 36px;
+    color: var(--mainText);
 }
 
 h3 {
     font-size: 28px;
+    color: var(--mainText);
 }
 
 h4 {
     font-size: 24px;
+    color: var(--mainText);
 }
 
 h5 {
     font-size: 20px;
+    color: var(--mainText);
 }
 
 h6 {
     font-size: 16px;
+    color: var(--mainText);
+}
+
+hText {
+    color: var(--highlightText);
+    text-shadow: 1px 0px 1px var(--mainText);
+    padding: top 0px;
+    padding-bottom: 0px;
 }
 
 /* ------------- for button effects :start -------------------------*/
@@ -249,11 +269,11 @@ h6 {
     border-left: 4px solid var(--borderColor);
 }
 
-.my-pic img{
+.my-pic img {
     display: block;
     margin: -30px auto 0 auto;
-    height:350px;
-    width:350px;
+    height: 350px;
+    width: 350px;
     object-fit: cover;
 }
 
@@ -320,27 +340,172 @@ h6 {
 }
 
 /*----------------------about navbar end-----------------------*/
+
 /*----------------------about content start-----------------------*/
 
-#about-contents{
+#about-contents, #education-contents, #trainings-contents {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-#about-contents img{
+
+#skills-contents {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#about-contents img, #education-contents img, #trainings-contents img {
     display: block;
     margin: 0 auto;
-    max-height:300px;
-    width:auto;
+    max-height: 300px;
+    width: auto;
+    object-fit: fill;
+}
+
+.left-column {
+    padding: 15px;
+    align-content: center;
+}
+
+.right-column {
+    padding: 15px;
+    justify-content: center;
+}
+
+.full-column {
+    padding: 15px;
+    justify-content: center;
+}
+
+#skills-contents .full-column p, #skills-contents .full-column h5 {
+    display: inline;
+    vertical-align: top;
+    line-height: 28px;
+    padding-top: 15px;
+}
+
+.post-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.thumbnail {
+    display: block;
+    height: 200px;
+    width: 100%;
     object-fit: cover;
 }
 
-#about-contents .right-column{
-    padding:0 15px;
-    justify-content: center;
-    text-align: center;
+.post {
+    border: 1px solid var(--borderColor);
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(235, 233, 228, 1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(235, 233, 228, 1);
+    box-shadow: 0px 0px 12px 0px rgba(235, 233, 228, 1);
 }
 
-/*----------------------about content end-----------------------*/
+.post-preview {
+    padding: 15px;
+}
+
+.post-title {
+    margin: 0;
+}
+
+.social-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 180px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.media {
+    cursor: pointer;
+    margin-bottom: -5px;
+    border: 0.5px solid var(--borderColor);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(235, 233, 228, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(235, 233, 228, 1);
+    box-shadow: 0px 0px 5px 0px rgba(235, 233, 228, 1);
+}
+
+.s-media {
+    display: inline-flex;
+}
+
+.media img {
+    margin: 3px 0 0 3px;
+    height: 50px;
+    width: 50px;
+}
+
+.media p {
+    padding-left: 5px;
+}
+
+.linkedin {
+    background-color: #00a0dc;
+}
+
+.facebook {
+    background-color: #4267B2;
+}
+
+.twitter {
+    background-color: #00acee;
+}
+
+.google {
+    background-color: #0F9D58;
+}
+
+/*----------------------Social icon content end-----------------------*/
+
+/*----------------------Contact Form content start-----------------------*/
+
+form {
+    padding: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form {
+    max-width: 450px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+.input-field {
+    width: 100%;
+    padding: 5px;
+    border-radius: 7px;
+    margin-bottom: 5px;
+}
+
+#btnSubmit {
+    margin: 10px auto auto auto;
+    width: 80%;
+}
+
+.contact-form-sec {
+    border-bottom: none;
+}
+
+/*----------------------Contact Form content end-----------------------*/
+
+/*----------------------Footer content start-----------------------*/
+
+.footer {
+    min-height: 50px;
+    color: var(--mainText);
+    text-align: center;
+    margin: 20px auto;
+}
+
+/*----------------------Footer content end-----------------------*/
 
 /* ------------- Intro wrapper style :start -------------------------*/
 
@@ -350,34 +515,58 @@ h6 {
     }
 }
 
+@media screen and (max-width:1034px) {
+    #about-contents {
+        grid-template-columns: 1fr;
+        margin: 0 6%;
+    }
+}
+
 @media screen and (max-width:860px) {
-    h3{
+    h3 {
         font-size: 20px;
-        margin-bottom:0px;
+        margin-bottom: 0px;
     }
     .greeting-wrapper {
         grid-template-columns: 1fr;
-        margin:0 8%;
+        margin: 0 8%;
     }
-    #about-contents{
+    #about-contents, #education-contents, #trainings-contents {
         display: grid;
         grid-template-columns: 1fr;
     }
-   
-    #about-contents img{
-        max-height:200px;
+    #education-contents div:nth-child(-n+2) {
+        border-bottom: 0.5px solid var(--borderColor);
+    }
+    #trainings-contents div:nth-child(-n+3) {
+        border-bottom: 0.5px solid var(--borderColor);
+    }
+    #about-contents img, #education-contents img, #trainings-contents img {
+        justify-content: center;
+        /* max-height:200px; */
+        max-width: 100%;
+    }
+    .left-column {
+        padding: 5px;
     }
 }
 
 @media screen and (max-width:600px) {
     .greeting-wrapper {
         grid-template-columns: 1fr;
-        margin:0 6%;
+        margin: 5px 6%;
     }
 }
 
 @media screen and (max-width:400px) {
-    #about-contents img{
+    /* #about-contents img{
         max-height:150px;
-    }
+    } */
+}
+
+
+
+/* to be removed after when top navigation is added */
+.s-greeting{
+    margin-top:100px;
 }
