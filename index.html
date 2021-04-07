@@ -161,18 +161,9 @@
                     <div class="post">
                         <img class="thumbnail" src="images/mypic.png">
                         <div class="post-preview">
-                            <h6 class="post-title"><hText>Smart Canteen</hText></h6>
-                            <p class="post-intro">The project description goes here.  I'll update it later.
-                            </p>
-                            <a href="#">Read more...</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="post">
-                        <img class="thumbnail" src="images/mypic.png">
-                        <div class="post-preview">
-                            <h6 class="post-title"><hText>Sarvanam MIS</hText></h6>
+                            <h6 class="post-title">
+                                <hText>Smart Canteen</hText>
+                            </h6>
                             <p class="post-intro">The project description goes here. I'll update it later.
                             </p>
                             <a href="#">Read more...</a>
@@ -183,7 +174,22 @@
                     <div class="post">
                         <img class="thumbnail" src="images/mypic.png">
                         <div class="post-preview">
-                            <h6 class="post-title"><hText>Inventory Management</hText></h6>
+                            <h6 class="post-title">
+                                <hText>Sarvanam MIS</hText>
+                            </h6>
+                            <p class="post-intro">The project description goes here. I'll update it later.
+                            </p>
+                            <a href="#">Read more...</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/mypic.png">
+                        <div class="post-preview">
+                            <h6 class="post-title">
+                                <hText>Inventory Management</hText>
+                            </h6>
                             <p class="post-intro">The project description goes here.</p>
                             <a href="#">Read more...</a>
                         </div>
@@ -196,46 +202,65 @@
         <div class="main-container">
             <h3 style="text-align: center; padding-bottom:15px;">Lets get connected</h3>
             <div class="social-wrapper">
-                <div class="media linkedin">
-                    <div class=" s-media ">
-                        <img class="smedia-icon" src="images/linkedin.png">
-                        <p>LinkedIn</p>
+                <a href="https://www.linkedin.com/in/sundaracharya/" target="_blank">
+                    <div class="media linkedin">
+                        <div class=" s-media ">
+                            <img class="smedia-icon" src="images/linkedin.png">
+                            <p>LinkedIn</p>
+                        </div>
                     </div>
-                </div>
-                <div class="media facebook">
-                    <div class="s-media ">
-                        <img class="smedia-icon" src="images/facebook.png">
-                        <p>Facebook</p>
+                </a>
+                <a href="https://www.facebook.com/Sundaracharyaa/" target="_blank">
+                    <div class="media facebook">
+                        <div class="s-media ">
+                            <img class="smedia-icon" src="images/facebook.png">
+                            <p>Facebook</p>
+                        </div>
                     </div>
-                </div>
-                <div class="media twitter">
-                    <div class="s-media ">
-                        <img class="smedia-icon" src="images/twitter.png">
-                        <p>Twitter</p>
+                </a>
+                <a href="https://twitter.com/sundaracharyaa" target="_blank">
+                    <div class="media twitter">
+                        <div class="s-media ">
+                            <img class="smedia-icon" src="images/twitter.png">
+                            <p>Twitter</p>
+                        </div>
                     </div>
-                </div>
-                <div class="media google">
-                    <div class="s-media ">
-                        <img class="smedia-icon" src="images/google.png">
-                        <p>Google</p>
+                </a>
+                <a href="https://www.instagram.com/sundaracharya98/" target="_blank">
+                    <div class="media instagram">
+                        <div class="s-media ">
+                            <img class="smedia-icon" src="images/instagram.png">
+                            <p>Instagram</p>
+                        </div>
                     </div>
-                </div>
+                </a>
+                <a href="tel:+9779843670184">
+                    <div class="media phone">
+                        <div class="s-media">
+                            <img class="smedia-icon" src="images/phone.png">
+                            <p>Call Me</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
     <section class="s2 contact-form-sec">
         <div class="main-container">
             <div class="form-wrapper">
-                <form id="contact-form">
+                <div id="contact-form">
                     <h3 style="text-align: center;">Lets Talk</h3>
                     <div class="form-input">
-                            <input class="input-field" type="text" placeholder="Name" />
-                            <input class="input-field" type="email" placeholder="Email" />
-                            <textarea class="input-field" style="min-height: 100px;" name="message" placeholder="Type your message." ></textarea>
+                        <input id="mName" class="input-field" type="text" placeholder="Name" />
+                        <input id="mSubject" class="input-field" type="text" placeholder="Subject"/>
+                        <input id="mEmail" class="input-field" type="email" placeholder="Email"/>
+                        <textarea id="message" class="input-field" style="min-height: 100px;" name="message"
+                            placeholder="Type your message."></textarea>
                     </div>
-                    <button id="btnSubmit" class="button fire" type="button">Send</button>
-
-                </form>
+                    <a href="mailto:sundaracharya096@gmail.com">
+                        <button id="btnSubmit" class="button fire submit-fire">Send</button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -243,6 +268,7 @@
         <div class="main-container">
             Copyright &copy; 2021 <a href="http://www.sundaracharya.com.np">Sundar Acharya</a>. All rights Reserved.
         </div>
+
     </section>
 </body>
 

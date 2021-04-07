@@ -139,6 +139,11 @@ hText {
     box-shadow: inset 0 0 50px 0 #ffeca8;
 }
 
+.submit-fire {
+    outline: none;
+    box-shadow: 0 0 30px rgba(255, 138, 48, 0.2), 0 5px 10px rgba(255, 138, 48, 0.6), inset 0 1px #ffeca8, inset 0 -1px #ffeca8 !important;
+}
+
 .button+.button {
     margin-top: 15px;
     -webkit-animation-delay: 0.3s;
@@ -457,8 +462,12 @@ hText {
     background-color: #00acee;
 }
 
-.google {
-    background-color: #0F9D58;
+.instagram {
+    background-color: #bc2a8d;
+}
+
+.phone {
+    background-color: var(--secondaryColor);
 }
 
 /*----------------------Social icon content end-----------------------*/
@@ -483,7 +492,7 @@ form {
     padding: 5px;
     border-radius: 7px;
     margin-bottom: 5px;
-    color:black;
+    color: black;
 }
 
 #btnSubmit {
@@ -565,9 +574,8 @@ form {
     } */
 }
 
-
-
 /* to be removed after when top navigation is added */
-.s-greeting{
-    margin-top:100px;
+
+.s-greeting {
+    margin-top: 100px;
 }
